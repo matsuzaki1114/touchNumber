@@ -1,4 +1,4 @@
-package todo;
+package touchNumber;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -113,7 +113,7 @@ public class TouchNumberGame {
         Random random = new Random();
         do {
             targetNumber = random.nextInt(MAX_NUMBER + 1);
-        } while (generatedNumbers.contains(targetNumber)); // 重複する数字を避ける
+        } while (generatedNumbers.contains(targetNumber));
 
         generatedNumbers.add(targetNumber);
         // ランダムな数値をボタンに表示
@@ -122,7 +122,7 @@ public class TouchNumberGame {
                 int number;
                 do {
                     number = random.nextInt(MAX_NUMBER + 1);
-                } while (generatedNumbers.contains(number)); // 重複する数字を避ける
+                } while (generatedNumbers.contains(number));
                 buttons[i][j].setText(String.valueOf(number));
             }
         }
